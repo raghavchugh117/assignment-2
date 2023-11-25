@@ -1,0 +1,36 @@
+﻿@model List<Student>
+
+<h2>Students</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>GPA</th>
+                <th>Email</th>
+                <th>Program</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student?.StudentId</td>
+                    <td>@student?.FirstName</td>
+                    <td>@student?.LastName</td>
+                    <td>@student?.GPA</td>
+                    <td>@student?.Email</td>
+                    <td>@student?.ProgramId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data available.</p>
+}
