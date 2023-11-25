@@ -37,3 +37,6 @@ steps:
   inputs:
     pathToPublish: $(outputDirectory)
     artifactName: MyBuildOutputs
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
